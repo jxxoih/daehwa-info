@@ -1,0 +1,246 @@
+.header {
+    width: 100%;
+    height: 100px;
+    background: rgb(255, 255, 255);
+    color: #ffffff;
+}
+
+.headerContainer1 {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.headerContainer2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 2;
+}
+
+.headerLogo {
+    width: 80%;
+    max-width: 20.125rem;
+}
+
+.headerLogoImg {
+    min-width: 13.125rem;
+    max-width: 80%;
+    cursor: pointer;
+}
+
+.headerMenu > ul {
+    height: 70px;
+}
+
+.headerMenu > ul,
+.headerSubMenu > ul  {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerMenu > ul > li,
+.headerSubMenu > ul > li {
+    width: 4.625rem;
+    color: #323232;
+    font-size: 1rem;
+    line-height: 25px;
+    padding: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.headerSubMenu > ul > li {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.headerSubMenu > ul > li > ul > li {
+    padding: 5px 0;
+    min-width: 8rem;
+    cursor: pointer;
+}
+
+
+.headerLangSelector, 
+.emptyLi {
+    font-size: 0.844rem;
+    max-width: 6.25rem;
+    height: 30px;
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+.headerLangSelector {
+    appearance: none;
+    background: url("../img/down_black.png") no-repeat center right 10px;
+    padding-right: 25px;
+    cursor: pointer;
+    color: #323232;
+}
+
+
+.headerLangSelector option {
+    font-size: 0.844rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #323232;
+}
+
+.disnone {
+    display: none;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -1%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 1;
+        transform: translate3d(0, -1%, 0);
+    }
+    to {
+        opacity: 0;
+        transform: translateZ(-100);
+    }
+}
+
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+
+
+.vOn {
+    position: relative;
+    animation: fadeInDown 0.3s;
+}
+
+.vOff {
+    position: relative;
+    animation: fadeInUp 0.3s;
+}
+
+.vMOn {
+    right: 0;
+    transition: 0.3s;
+}
+
+.vMOff {
+    right: -100%;
+    transition: 0.3s;
+}
+
+/* 모바일 반응형 */
+
+.headerContainer1_m {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerLogo_m {
+    height: 70px;
+}
+
+.headerLogoImg_m {
+    padding: 10px;
+}
+
+.headerMenuBar_m {
+    line-height: 70px;
+    margin-right: 10px;
+}
+
+.headerContainer2_m {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    height: 100vh;
+    width: 80%;
+    margin-left: 20%;
+    overflow-y: auto;
+}
+
+.hambutton_x_m {
+    /* position: fixed; */
+    /* right: 0; */
+    float: left;
+    padding: 24px 13.2px 0 24px;
+}
+
+.hamMenuBar_m {
+    margin-top: 90px;
+    margin-bottom: 20px;
+    text-align: right;
+    /* margin-right: 50px; */
+}
+
+.header_m {
+    display: none;
+}
+
+.hamMenuBar_m ul {
+    margin: 0 2.125rem;
+    border-bottom: 1px solid #ffffff;
+    padding: 0 1.25rem;
+}
+
+.hamMenuBar_m ul li {
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.hamMenuBar_m ul li h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.hamMenuBar_m ul li:not(:first-child) {
+    padding-bottom: 1rem;
+}
+
+
+@media screen and (max-width: 768px) {
+	.header_m {
+        display: block;
+    }
+    .header {
+        display: none;
+    }
+}   
+
+@media screen and (max-width: 360px) {
+	
+}
+
+@media screen and (max-width: 428px) {
+	
+}
+
+
+

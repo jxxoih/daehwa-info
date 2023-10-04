@@ -1,0 +1,244 @@
+.footer {
+    width: 100%;
+    background-color: #313240;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-frame {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.footerText {
+    padding: 2.5rem 0;
+    font-size: 1rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #fff;
+}
+
+.footerContainer1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerContainer2 {
+    width: 100%;
+    max-width: 1000px;
+    height: 126px;
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.footerMenu {
+    margin: 0 2.125rem 1.07rem 0;
+    font-size: 0.75rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+}
+
+.footerSitemapArea {
+    width: 100%;
+    max-width: 1000px;
+    padding: 6.344rem 0;
+    border-bottom: 1px solid #D9D9D9;
+    border-top: 1px solid #D9D9D9;
+}
+
+.footerSitemapArea > ul {
+    height: 100%;
+    display: flex;
+}
+
+.footerSitemapArea > ul > .footerSitemapList {
+    float: left;
+    width: 150px;
+    height: 100%;
+    line-height: 1.5;
+}
+
+.footerSitemapList > ul > li {
+    margin: 1.07rem 1.688rem 0 0;
+    font-size: 0.75rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footerExtraArea {
+    width: 30vw;
+    max-width: 17.5rem;
+    height: 8.078rem;
+    flex-grow: 0;
+    /* margin: 0 0.125rem 3.578rem 20px; */
+    margin-left: auto;
+    padding: 0.8rem 1rem;
+    border-radius: 15px;
+    border: solid 3px #d9d9d9;
+}
+
+.footerServiceCenter {
+    /* width: 10.875rem; */
+    height: 5.313rem;
+    flex-grow: 0;
+}
+
+.footerServiceCenter > div {
+    padding: 0.5rem 0;
+}
+
+
+.serviceCenterText {
+    margin: 0 5.125rem 0.813rem 0;
+    font-size: 0.95rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+}
+
+.serviceCenterTime {
+    margin: 0.813rem 0;
+    font-size: 1.25rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+}
+
+.serviceCenterTime .textStyle {
+    font-size: 0.75rem;
+}
+
+.tel {
+    margin: 0.813rem 0.313rem 0 0;
+    font-size: 0.75rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.44px;
+    text-align: left;
+    color: #fff;
+}
+
+
+.footerCopyright {
+    padding: 30px 0;
+    flex-grow: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #fff;
+}
+
+.footerCopyright > div {
+    font-size: 16px;
+    line-height: 21.79px;
+    text-align: right;
+}
+
+.footerReserved {
+    flex-grow: 0;
+    margin-top: 0.1rem;
+    font-family: NotoSans;
+    font-size: 0.875rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #d2d2d2;
+}
+
+.footer_m {
+    display: none;
+}
+
+/* 모바일 */
+
+.footer_m {
+    background-color: #313240;
+}
+
+.footer_m_logo {
+    padding: 1.25rem;
+}
+
+.footer_m_context {
+    border-bottom: 1px solid #d9d9d9;
+    padding: 0 1.25rem 1.25rem 1.25rem;
+}
+
+.footer_m_context p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #D2D2D2;
+}
+
+.footer_m_copyright {
+    padding: 1.3131rem;
+}
+
+.footer_m_copyright p {
+    font-size: 0.75rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #d2d2d2;
+}
+
+
+@media screen and (max-width: 768px) {
+    .footer_m {
+        display: block;
+    }
+
+    .footer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 360px) {
+	
+}
+
+@media screen and (max-width: 428px) {
+	
+}

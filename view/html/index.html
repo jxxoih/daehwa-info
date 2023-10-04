@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>대화공업</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="DAEHWA" />
+    <meta property="og:description" content="DAEHWA,대화" />
+    <meta property="og:image" content="http://info.joynjoin.kr/view/img/meta_logo.png" />
+    <meta property="og:url" content="http://info.joynjoin.kr" />
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <script src="../js/common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/footer.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+
+
+    <style>
+        .swiper {
+            width: 100%;
+            height: 100%;
+            max-height: 800px;
+        }
+
+        .productSlider {
+            /* width: 45.083vw; */
+            width: 1000px;
+            height: 100%;
+        }
+
+
+        .swiper-wrapper {
+            width: 1000px;
+        }
+
+        .swiper-slide {
+            /* text-align: center; */
+            font-size: 18px;
+            background: #fff;
+            height: 100%;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 700;
+            /* padding: 0 5%; */
+        }
+
+        .swiper-pagination {
+            margin-bottom: 1.5rem;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .swiper-button-next {
+                right: 30%;
+            }
+
+            .swiper-button-prev {
+                left: 30%;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                z-index: 999;
+                color: rgba(255, 255, 255, 0.8);
+                /* width: 14rem; */
+                top: 94.5%;
+            }
+
+            .swiper-button-next::after,
+            .swiper-button-prev::after {
+                font-size: 0.5rem;
+            }
+
+            .swiper-pagination {
+                font-size: 0.625rem;
+                top: 91%;
+            }
+
+            .productSlider,
+            .swiper-wrapper {
+                width: 100%;
+            }
+
+        }
+
+        @media screen and (max-width: 428px) {
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                color: rgba(255, 255, 255, 0.8);
+                /* width: 14rem; */
+                top: 90%;
+            }
+        }
+
+        .swiper-pagination-bullet {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="headerContainer1">
+            <div class="headerLogo">
+                <img class="headerLogoImg" src="../img/logo.png" onclick="moveToUrl('index.html')">
+            </div>
+            <div class="headerMenu">
+                <ul>
+                    <li class="subMenuToggle">회사소개</li>
+                    <li class="subMenuToggle">제품소개</li>
+                    <li class="subMenuToggle">인증서</li>
+                    <li class="subMenuToggle">고객센터</li>
+                    <li>
+                        <select class="headerLangSelector" onchange="shopLocation(this);">
+                            <option selected disabled hidden>쇼핑몰</option>
+                            <option value="1">기업몰</option>
+                            <!-- <option value="2">개인몰</option> -->
+                        </select>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="headerContainer2 disnone">
+            <div class="headerLogo">
+                &nbsp;
+            </div>
+            <div class="headerSubMenu">
+                <ul>
+                    <li>
+                        <ul>
+                            <li onclick="moveToUrl('greetings.html')">인사말</li>
+                            <li onclick="moveToUrl('history.html')">연혁</li>
+                            <li onclick="moveToUrl('locationMap.html')">찾아오시는 길</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li onclick="moveToUrl('productInfo.html')">제품소개</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li onclick="moveToUrl('certificate.html')">인증서</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li onclick="moveToUrl('serviceCenter.html')">고객문의</li>
+                            <li onclick="moveToUrl('notice.html')">공지사항</li>
+                            <li onclick="moveToUrl('faq.html')">자주묻는질문</li>
+                            <li onclick="moveToUrl('question.html')">1:1 문의하기</li>
+                            <li onclick="moveToUrl('employment.html')">인재채용</li>
+                        </ul>
+                    </li>
+                    <li class="emptyLi"></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <header class="header_m">
+        <div class="headerContainer2_m vMOff">
+            <div class="hambutton_x_m">
+                <img src="../img/hambutton_x_m.png" alt="닫기" onclick="closeMenu();">
+            </div>
+            <div class="hamMenuBar_m">
+                <ul>
+                    <li onclick="moveToUrl('greetings.html')">
+                        <h2>회사소개</h2>
+                    </li>
+                    <li onclick="moveToUrl('greetings.html')">
+                        <span>인사말</span>
+                    </li>
+                    <li onclick="moveToUrl('history.html')">
+                        <span>연혁</span>
+                    </li>
+                    <li onclick="moveToUrl('locationMap.html')">
+                        <span>찾아오시는 길</span>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li onclick="moveToUrl('productInfo.html')">
+                        <h2>제품소개</h2>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li onclick="moveToUrl('certificate.html')">
+                        <h2>인증서</h2>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li onclick="moveToUrl('serviceCenter.html')">
+                        <h2>고객센터</h2>
+                    </li>
+                    <li onclick="moveToUrl('serviceCenter.html')">
+                        <span>고객문의</span>
+                    </li>
+                    <li onclick="moveToUrl('notice.html')">
+                        <span>공지사항</span>
+                    </li>
+                    <li onclick="moveToUrl('faq.html')">
+                        <span>자주묻는질문</span>
+                    </li>
+                    <li onclick="moveToUrl('question.html')">
+                        <span>1:1 문의하기</span>
+                    </li>
+                    <li onclick="moveToUrl('employment.html')">
+                        <span>인재채용</span>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <h2>쇼핑몰</h2>
+                    </li>
+                    <li onclick="shopLocation_m(1)">
+                        <span>기업몰</span>
+                    </li>
+                    <!-- <li onclick="shopLocation_m(2)">
+                        <span>개인몰</span>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="headerContainer1_m">
+            <div class="headerLogo_m">
+                <img class="headerLogoImg_m" src="../img/logo_m.png" onclick="moveToUrl('index.html')">
+            </div>
+            <div class="headerMenuBar_m" onclick="openMenu();">
+                <img src="../img/hambutton.png">
+            </div>
+        </div>
+
+    </header>
+
+
+
+    <main>
+        <div class="topBtn disnone" onclick="topScroll();">
+            <img src="../img/top.png" alt="">
+        </div>
+
+
+        <div class="mainContentContainer">
+            <div class="sliderContainer">
+                <div class="swiper mySwiper mainSlider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide mainSlide">
+                            <div class="slideTextWrapper">
+                                <span class="slideText1">
+                                    (주) 대화공업의 제품은 <br>
+                                </span>
+                                <span class="slideText2">
+                                    조그마한 부품하나에도 기술 집약적인 <br>기업철학이 담겨져 있습니다.
+                                </span>
+                            </div>
+                            <div class="img-size">
+                                <div class="img-center">
+                                    <img class="slideImg" src="../img/slide_img_1.jpg" alt="슬라이드 이미지">
+                                    <img class="slideImg_m" src="../img/slide_img_m_1.png" alt="슬라이드 이미지">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide mainSlide">
+                            <div class="slideTextWrapper">
+                                <span class="slideText1">
+                                    (주) 대화공업의 제품은 <br>
+                                </span>
+                                <span class="slideText2">
+                                    창업이래 리벳트 및 스쿠류 부품 생산에 <br>최선의 노력을 다하고 있습니다.
+                                </span>
+                            </div>
+                            <div class="img-size">
+                                <div class="img-center">
+                                    <img class="slideImg" src="../img/slide_img_2.jpg" alt="슬라이드 이미지">
+                                    <img class="slideImg_m" src="../img/slide_img_m_2.png" alt="슬라이드 이미지">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide mainSlide">
+                            <div class="slideTextWrapper">
+                                <span class="slideText1">
+                                    (주) 대화공업의 제품은 <br>
+                                </span>
+                                <span class="slideText2">
+                                    끊임없는 연구를 계속함으로써 외국부품을 <br>국산화로 대체하는 효과를 달성하였습니다.
+                                </span>
+                            </div>
+                            <div class="img-size">
+                                <div class="img-center">
+                                    <img class="slideImg" src="../img/slide_img_3.jpg" alt="슬라이드 이미지">
+                                    <img class="slideImg_m" src="../img/slide_img_m_3.png" alt="슬라이드 이미지">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <script>
+                    var swiper = new Swiper(".mainSlider", {
+                        centeredSlides: true,
+                        autoplay: {
+                            delay: 4500,
+                            disableOnInteraction: false,
+                        },
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                        },
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                        loop: true,
+
+                    });
+                </script>
+
+            </div>
+
+            <div class="mainProductContainer">
+                <div class="titleWrapper">
+                    <div class="containerTitle">
+                        <p>
+                            <span class="containerTitleKR">제품</span>
+                            <span class="containerTitleEng">Products</span>
+                        </p>
+                        <p class="containerComment">상세한 제품 이미지와 다양한 제품정보를 보실 수 있습니다.</p>
+                    </div>
+                </div>
+
+                <div class="mainWrapper">
+                    <div class="swiper mySwiper productSlider">
+                        <div class="swiper-wrapper mainProductSlider">
+
+                        </div>
+                    </div>
+                    <script>
+                        var swiper = new Swiper(".productSlider", {
+                            slidesPerView: 2.5,
+                            spaceBetween: 30,
+                            freeMode: true,
+                            pagination: {
+                                clickable: true,
+                            },
+                        });
+                    </script>
+
+                    <swiper-container class="mySwiper productContainer_m" slides-per-view="1.2" space-between="30"
+                        free-mode="true">
+
+                    </swiper-container>
+                </div>
+            </div>
+
+            <div class="mainContent serviceContainer">
+                <div>
+                    <div class="containerTitle">
+                        <p>
+                            <span class="containerTitleKR">고객지원</span>
+                            <span class="containerTitleEng">Customer Service</span>
+                        </p>
+                        <p class="containerComment">궁금한 사항은 언제든지 문의 해주세요!</p>
+                    </div>
+
+                    <div class="mainWrapper mainWrapper_service">
+                        <div>
+                            <div class="serviceList">
+                                <div class="service1">
+                                    <div class="serviceImg">
+                                        <div class="imgFrame imgFrame-headphones"
+                                            onclick="moveToUrl('serviceCenter.html')">
+                                            <img src="../img/headphones.svg" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="serviceNm">
+                                        <span>고객문의</span>
+                                    </div>
+                                </div>
+                                <div class="service1">
+                                    <div class="serviceImg">
+                                        <div class="imgFrame imgFrame-newspaper" onclick="moveToUrl('notice.html')">
+                                            <img src="../img/newspaper.svg" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="serviceNm">
+                                        <span>공지사항</span>
+                                    </div>
+                                </div>
+                                <div class="service1">
+                                    <div class="serviceImg">
+                                        <div class="imgFrame imgFrame-favorite" onclick="moveToUrl('faq.html')">
+                                            <img src="../img/favorite.svg" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="serviceNm">
+                                        <span>자주묻는 질문</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="serviceList">
+                                <div class="service2">
+                                    <div class="serviceImg">
+                                        <div class="imgFrame imgFrame-telephone" onclick="moveToUrl('question.html')">
+                                            <img src="../img/telephone.svg" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="serviceNm">
+                                        <span>1:1 문의하기</span>
+                                    </div>
+                                </div>
+                                <div class="service2">
+                                    <div class="serviceImg">
+                                        <div class="imgFrame imgFrame-placeholder"
+                                            onclick="moveToUrl('locationMap.html')">
+                                            <img src="../img/placeholder.svg" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="serviceNm">
+                                        <span>오시는 길</span>
+                                    </div>
+                                </div>
+                                <div class="service2">
+                                    <div class="serviceImg">
+                                        <div class="imgFrame imgFrame-user" onclick="moveToUrl('employment.html')">
+                                            <img src="../img/user.svg" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="serviceNm">
+                                        <span>인재채용</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mainWrapper_service_m">
+                        <div>
+                            <div class="serviceList_m">
+                                <div class="service_m">
+                                    <div class="service1">
+                                        <div class="serviceImg">
+                                            <div class="imgFrame imgFrame-headphones"
+                                                onclick="moveToUrl('serviceCenter.html')">
+                                                <img src="../img/headphones.svg">
+                                            </div>
+                                        </div>
+                                        <div class="serviceNm">
+                                            <span>고객문의</span>
+                                        </div>
+                                    </div>
+                                    <div class="service1">
+                                        <div class="serviceImg">
+                                            <div class="imgFrame imgFrame-newspaper" onclick="moveToUrl('notice.html')">
+                                                <img src="../img/newspaper.svg">
+                                            </div>
+                                        </div>
+                                        <div class="serviceNm">
+                                            <span>공지사항</span>
+                                        </div>
+                                    </div>
+                                    <div class="service1">
+                                        <div class="serviceImg">
+                                            <div class="imgFrame imgFrame-favorite" onclick="moveToUrl('faq.html')">
+                                                <img src="../img/favorite.svg">
+                                            </div>
+                                        </div>
+                                        <div class="serviceNm">
+                                            <span>자주묻는 질문</span>
+                                        </div>
+                                    </div>
+                                    <div class="service1">
+                                        <div class="serviceImg">
+                                            <div class="imgFrame imgFrame-telephone"
+                                                onclick="moveToUrl('question.html')">
+                                                <img src="../img/telephone.svg">
+                                            </div>
+                                        </div>
+                                        <div class="serviceNm">
+                                            <span>1:1 문의하기</span>
+                                        </div>
+                                    </div>
+                                    <div class="service1">
+                                        <div class="serviceImg">
+                                            <div class="imgFrame imgFrame-placeholder"
+                                                onclick="moveToUrl('locationMap.html')">
+                                                <img src="../img/placeholder.svg">
+                                            </div>
+                                        </div>
+                                        <div class="serviceNm">
+                                            <span>오시는 길</span>
+                                        </div>
+                                    </div>
+                                    <div class="service1">
+                                        <div class="serviceImg">
+                                            <div class="imgFrame imgFrame-user" onclick="moveToUrl('employment.html')">
+                                                <img src="../img/user.svg">
+                                            </div>
+                                        </div>
+                                        <div class="serviceNm">
+                                            <span>인재채용</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer class=footer>
+        <div class="footer-frame">
+            <div class="footerText">
+                리벳트 및 스크류 부품 생산에 최선의 노력을 다하고 있는 대화공업입니다.
+            </div>
+
+            <div class=footerContainer1>
+                <div class=footerSitemapArea>
+                    <ul>
+                        <li class=footerSitemapList>
+                            <h2 class=footerMenu>회사소개</h2>
+                            <ul>
+                                <li onclick="moveToUrl('greetings.html')">인사말</li>
+                                <li onclick="moveToUrl('history.html')">연혁</li>
+                                <li onclick="moveToUrl('locationMap.html')">찾아오시는 길</li>
+                            </ul>
+                        </li>
+                        <li class=footerSitemapList>
+                            <h2 class=footerMenu>제품소개</h2>
+                            <ul>
+                                <li onclick="moveToUrl('productInfo.html')">제품소개</li>
+                            </ul>
+                        </li>
+                        <li class=footerSitemapList>
+                            <h2 class=footerMenu>인증서</h2>
+                            <ul>
+                                <li onclick="moveToUrl('certificate.html')">인증서</li>
+                            </ul>
+                        </li>
+                        <li class=footerSitemapList>
+                            <h2 class=footerMenu>고객센터</h2>
+                            <ul>
+                                <li onclick="moveToUrl('serviceCenter.html')">고객문의</li>
+                                <li onclick="moveToUrl('notice.html')">공지사항</li>
+                                <li onclick="moveToUrl('faq.html')">자주묻는질문</li>
+                                <li onclick="moveToUrl('question.html')">1:1 문의하기</li>
+                                <li onclick="moveToUrl('employment.html')">인재채용</li>
+                            </ul>
+                        </li>
+                        <div class=footerExtraArea>
+                            <div class=footerServiceCenter>
+                                <div>
+                                    <span class="serviceCenterText">
+                                        고객센터 운영시간
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="serviceCenterTime">
+                                        <span class="textStyle">AM</span>
+                                        07:50 ~
+                                        <span class="textStyle">PM</span>
+                                        18:10
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="tel">
+                                        Tel 82+ 053-581-2277~9
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class=footerContainer2>
+                <div class=footerCopyright>
+                    <div>대구광역시 달서구 성서동로 158(월암동) 우편번호 : 42721 #158, SEONGSEODONG-RO,DALSEO-GU,DAEGU,KOREA</div>
+                    <div>TEL : 82-581-2277~9 FAX : 82-53-582-2252 E-mail : webmaster@daehwaind.com</div>
+                    <div class=footerReserved>ⓒ 2023. DAEHWA All Rights Reserved.</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="footer_m">
+        <div class="footer_m_info">
+            <div class="footer_m_logo">
+                <img src="../img/footer_m_logo.png" alt="">
+            </div>
+            <div class="footer_m_context">
+                <p>
+                    대구광역시 달서구 성서동로 158 (우 : 42721)<br>
+                    #158, SEONGSEODONG-RO,DALSEO-GU,DAEGU,KOREA.
+                </p>
+                <br>
+                <p>
+                    TEL : 82-581-2277~9 FAX : 82-53-582-2252<br>
+                    E-mail : webmaster@daehwaind.com
+                </p>
+            </div>
+        </div>
+        <div class="footer_m_copyright">
+            <p>
+                ⓒ 2023. DAEHWA All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

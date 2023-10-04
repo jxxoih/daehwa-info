@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Song+Myung&display=swap');
+body > * {
+    font-size: 1rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #323232;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* 인터넷익스플로러 */
+    user-select: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #D7D7D7;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+img {
+    -webkit-user-drag: none
+}
+
+button {
+    cursor: pointer;
+}
+
+.radioCheckLabel {
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+}
+
+.topBtn {
+    position: fixed;
+    z-index: 999;
+    width: 1rem;
+    height: 1rem;
+    padding: 0.625rem;
+    line-height: 1rem;
+    border-radius: 50%;
+    background-color: rgba(141, 141, 141, 0.3);
+    border: 2px solid #8D8D8D;
+    cursor: pointer;
+    right: 4vw;
+    bottom: 4vh;
+}
+
+.topBtn img {
+    width: 100%;
+}
+
+/* 메뉴 이동후 페이지 공통 */
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.mainHeaderTitleContainer {
+    height: 300px;
+}
+
+.mainHeaderTitle {
+    position: relative;
+    top: -45%;
+}
+
+
+.titleText1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 54px;
+    text-align: center;
+    color: #323232;
+}
+
+.titleText2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    color: #323232;
+}
+
+.mainContentTitle {
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    padding-top: 30px;
+}
+
+.contentTitle1 {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 49px;
+    /* identical to box height */
+    text-align: center;
+    color: #323232;
+}
+
+.contentTitle2 {
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+    color: #000000;
+}
+
+.disnone {
+    display: none;
+}
+
+/* 모바일 */
+
+.mainHeaderTitleContainer_m {
+    display: none;
+    margin: 1rem 0;
+}
+
+.subMenuSelectBox {
+    width: 100%;
+}
+
+.subMenuSelector_m {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.subMenuSelector {
+    width: 92%;
+    height: 2.813rem;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+}
+
+.subMenuSelector._toggle {
+    width: 92%;
+    height: 2.813rem;
+    border: 1px solid #D9D9D9;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.subMenuOption_m {
+    width: 100%;
+
+}
+
+.subMenuOptions {
+    display: flex;
+    justify-content: center;
+}
+
+.subMenuOption {
+    width: 92%;
+    height: 2.813rem;
+    border-left: 1px solid #D9D9D9;
+    border-right: 1px solid #D9D9D9;
+}
+
+.subMenuOption_m .subMenuOptions:last-child .subMenuOption {
+    border-bottom: 1px solid #D9D9D9;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+.subMenuOption p,
+.subMenuSelector p,
+._toggle p {
+    padding: 0.625rem;
+}
+
+.upImg {
+    float: right;
+    margin: 0.6rem;
+}
+
+.subMenuSelector p span,
+._toggle p span {
+    line-height: 0.625rem;
+}
+
+.mainTitle_m {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: #323232;
+}
+
+.mainTitle_eng_m {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #9D9D9D;
+}
+
+.subMenuOption p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #323232;
+}
+
+.subMenuOption.on {
+    background-color: #000255;
+}
+.subMenuOption.on p {
+    color: #ffffff;
+}
+
+
+@media screen and (max-width: 1000px) {
+    * {
+        -webkit-tap-highlight-color : transparent !important;
+    } 
+}
+
+@media screen and (max-width: 768px) {
+    .mainHeaderTitleContainer {
+        display: none;
+    }
+
+    .mainHeaderTitleContainer_m {
+        display: flex;
+        justify-content: center;
+    }
+
+    .mainContentTitle {
+        width: 100%;
+    }
+
+    .contentTitle1 {
+        font-size: 1.625rem;
+        line-height: 2.188rem;
+    }
+
+    .contentTitle2 {
+        font-size: 0.875rem;
+        line-height: 1.188rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+	
+}
+
+@media screen and (max-width: 428px) {
+	body {
+        overflow-x: hidden;
+    }
+}

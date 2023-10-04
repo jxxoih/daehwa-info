@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>대화공업</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script src="../js/common.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/common.css" />
+  <link rel="stylesheet" type="text/css" href="../css/header.css">
+  <link rel="stylesheet" type="text/css" href="../css/footer.css">
+
+  <link rel="stylesheet" type="text/css" href="../css/serviceCenter.css" />
+  <link rel="shortcut icon" href="../img/favicon.ico">
+</head>
+
+<body>
+  <header class="header">
+    <div class="headerContainer1">
+      <div class="headerLogo">
+        <img class="headerLogoImg" src="../img/logo.png" onclick="moveToUrl('index.html');">
+      </div>
+      <div class="headerMenu">
+        <ul>
+          <li class="subMenuToggle">회사소개</li>
+          <li class="subMenuToggle">제품소개</li>
+          <li class="subMenuToggle">인증서</li>
+          <li class="subMenuToggle">고객센터</li>
+          <li>
+            <select class="headerLangSelector" onchange="shopLocation(this);">
+              <option selected disabled hidden>쇼핑몰</option>
+              <option value="1">기업몰</option>
+              <!-- <option value="2">개인몰</option> -->
+            </select>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="headerContainer2 disnone">
+      <div class="headerLogo">
+        &nbsp;
+      </div>
+      <div class="headerSubMenu">
+        <ul>
+          <li>
+            <ul>
+              <li onclick="moveToUrl('greetings.html');">인사말</li>
+              <li onclick="moveToUrl('history.html');">연혁</li>
+              <li onclick="moveToUrl('locationMap.html');">찾아오시는 길</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li onclick="moveToUrl('productInfo.html');">제품소개</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li onclick="moveToUrl('certificate.html');">인증서</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li onclick="moveToUrl('serviceCenter.html');">고객문의</li>
+              <li onclick="moveToUrl('notice.html');">공지사항</li>
+              <li onclick="moveToUrl('faq.html');">자주묻는질문</li>
+              <li onclick="moveToUrl('question.html');">1:1 문의하기</li>
+              <li onclick="moveToUrl('employment.html');">인재채용</li>
+            </ul>
+          </li>
+          <li class="emptyLi"></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <header class="header_m">
+    <div class="headerContainer2_m vMOff">
+      <div class="hambutton_x_m">
+        <img src="../img/hambutton_x_m.png" alt="닫기" onclick="closeMenu();">
+      </div>
+      <div class="hamMenuBar_m">
+        <ul>
+          <li onclick="moveToUrl('greetings.html');">
+            <h2>회사소개</h2>
+          </li>
+          <li onclick="moveToUrl('greetings.html');">
+            <span>인사말</span>
+          </li>
+          <li onclick="moveToUrl('history.html');">
+            <span>연혁</span>
+          </li>
+          <li onclick="moveToUrl('locationMap.html');">
+            <span>찾아오시는 길</span>
+          </li>
+        </ul>
+
+        <ul>
+          <li onclick="moveToUrl('productInfo.html');">
+            <h2>제품소개</h2>
+          </li>
+        </ul>
+
+        <ul>
+          <li onclick="moveToUrl('certificate.html');">
+            <h2>인증서</h2>
+          </li>
+        </ul>
+
+        <ul>
+          <li onclick="moveToUrl('serviceCenter.html');">
+            <h2>고객센터</h2>
+          </li>
+          <li onclick="moveToUrl('serviceCenter.html');">
+            <span>고객문의</span>
+          </li>
+          <li onclick="moveToUrl('notice.html');">
+            <span>공지사항</span>
+          </li>
+          <li onclick="moveToUrl('faq.html');">
+            <span>자주묻는질문</span>
+          </li>
+          <li onclick="moveToUrl('question.html');">
+            <span>1:1 문의하기</span>
+          </li>
+          <li onclick="moveToUrl('employment.html');">
+            <span>인재채용</span>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <h2>쇼핑몰</h2>
+          </li>
+          <li onclick="shopLocation_m(1)">
+            <span>기업몰</span>
+          </li>
+          <!-- <li onclick="shopLocation_m(2)">
+            <span>개인몰</span>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+    <div class="headerContainer1_m">
+      <div class="headerLogo_m">
+        <img class="headerLogoImg_m" src="../img/logo_m.png" onclick="moveToUrl('index.html');">
+      </div>
+      <div class="headerMenuBar_m" onclick="openMenu();">
+        <img src="../img/hambutton.png">
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+    <div class="topBtn disnone" onclick="topScroll();">
+      <img src="../img/top.png" alt="">
+    </div>
+
+    <div class="mainHeaderTitleContainer">
+      <div class="mainHeaderTitleContainerImg">
+        &nbsp;
+      </div>
+      <div class="mainHeaderTitle">
+        <p class="titleText1">고객센터</p>
+        <p class="titleText2">Customer Center</p>
+      </div>
+    </div>
+
+    <div class="mainHeaderTitleContainer_m">
+      <div class="subMenuSelectBox">
+        <div class="subMenuSelector_m">
+          <div class="subMenuSelector" id="selectBox" onclick="selectBox();">
+            <p>
+              <span class="mainTitle_m">고객센터</span>
+              <span class="mainTitle_eng_m">Customer Center</span>
+              <span><img class="upImg disnone" src="../img/up.png" alt=""></span>
+            </p>
+          </div>
+        </div>
+        <div class="subMenuOption_m disnone">
+          <div class="subMenuOptions">
+            <div class="subMenuOption" onclick="moveToUrl('serviceCenter.html');">
+              <p>고객문의</p>
+            </div>
+          </div>
+
+          <div class="subMenuOptions">
+            <div class="subMenuOption on" onclick="return false;">
+              <p>공지사항</p>
+            </div>
+          </div>
+
+          <div class="subMenuOptions">
+            <div class="subMenuOption" onclick="moveToUrl('faq.html');">
+              <p>자주묻는질문</p>
+            </div>
+          </div>
+
+          <div class="subMenuOptions">
+            <div class="subMenuOption" onclick="moveToUrl('question.html');">
+              <p>1:1 문의하기</p>
+            </div>
+          </div>
+
+          <div class="subMenuOptions">
+            <div class="subMenuOption" onclick="moveToUrl('employment.html');">
+              <p>인재채용</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mainContentContainer">
+      <div class="content2">
+        <div class="mainContentTitle">
+          <p class="contentTitle1">공지사항</p>
+          <p class="contentTitle2">유용한 정보 및 다양한 공지를 안내드립니다.</p>
+        </div>
+
+
+        <div class="mainContent">
+          <div>
+            <div class="article" id="article1">
+              <div class="articleTitle">
+                <p>
+                  대화공업의 홈페이지가 리뉴얼 되었습니다!
+                </p>
+                <p>
+                  2023-01-25
+                </p>
+              </div>
+
+              <div class="articleTitleWrapper">
+                <div class="articleTitle_m">
+                  <p>
+                    대화공업의 홈페이지가 리뉴얼 되었습니다!
+                  </p>
+                </div>
+                <div class="articleTitle_m_date">
+                  <p>
+                    2023-01-25
+                  </p>
+                </div>
+              </div>
+
+              <div class="articleContent">
+                <p>
+                  대화공업의 홈페이지가 리뉴얼 되었습니다!<br>
+                  또한 기업 및 개인 쇼핑몰도 새롭게 준비하였으니 많은 관심 부탁드립니다.<br>
+                  감사합니다.
+                </p>
+              </div>
+            </div>
+
+            <div class="article" id="article2">
+              <div class="articleTitle">
+                <p>
+                  안전신문, 대화공업 무재해 7배 달성
+                </p>
+                <p>
+                  2023-01-25
+                </p>
+              </div>
+
+              <div class="articleTitleWrapper">
+                <div class="articleTitle_m">
+                  <p>
+                    안전신문, 대화공업 무재해 7배 달성
+                  </p>
+                </div>
+                <div class="articleTitle_m_date">
+                  <p>
+                    2023-01-25
+                  </p>
+                </div>
+              </div>
+
+              <div class="articleContent">
+                <p>
+                  <img src="../img/article_img1.png" alt=""><br><br>
+                  안전보건공단 대구서부지사(지사장 이주영)는 31일 무재해 7배를 달성한 대화공업과<br>
+                  무재해 2배를 달성한 에이비테크(주)를 각각 방문해 인증서를 전달했다.<br>
+                  <br>
+                  특히 대화공업은 사고사례교육을 실시하는 등 산업재해 예방을 위해 지속적인 노력을 기울인 결과<br>
+                  대화공업은 2006년 10월부터 2017년 6월까지 3000일 넘게 무재해를 유지했다.<br>
+                  <br>
+                  출처 : 안전신문(https://www.safetynews.co.kr)
+                  <br><br>
+                </p>
+              </div>
+            </div>
+
+            <div class="article" id="article3">
+              <div class="articleTitle">
+                <p>
+                  영상
+                </p>
+                <p>
+                  2023-06-16
+                </p>
+              </div>
+
+              <div class="articleTitleWrapper">
+                <div class="articleTitle_m">
+                  <p>
+                    영상
+                  </p>
+                </div>
+                <div class="articleTitle_m_date">
+                  <p>
+                    2023-06-16
+                  </p>
+                </div>
+              </div>
+
+              <div class="articleContent">
+                <p>
+                <div id="player">
+
+                </div>
+                <!-- <iframe width="100%" height="500px" src="https://www.youtube.com/embed/FMaKtde4T2w?autoplay=1&loop=1"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop;"
+                    allowfullscreen></iframe> -->
+
+                </p>
+              </div>
+            </div>
+
+            <div class="articleBtns">
+              <div>
+                <button class="articleBtn" id="aPrevBtn" onclick="prevArticle(this);">이전글</button>
+                <button class="articleBtn" id="aNextBtn" onclick="nextArticle(this);">다음글</button>
+              </div>
+              <div>
+                <button class="articleBtn boardBtn" id="boardBtn" onclick="moveToUrl('./notice.html');">목록</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+  <script src="../js/article.js"></script>
+
+  <footer class=footer>
+    <div class="footer-frame">
+      <div class="footerText">
+        리벳트 및 스크류 부품 생산에 최선의 노력을 다하고 있는 대화공업입니다.
+      </div>
+
+      <div class=footerContainer1>
+        <div class=footerSitemapArea>
+          <ul>
+            <li class=footerSitemapList>
+              <h2 class=footerMenu>회사소개</h2>
+              <ul>
+                <li onclick="moveToUrl('greetings.html');">인사말</li>
+                <li onclick="moveToUrl('history.html');">연혁</li>
+                <li onclick="moveToUrl('locationMap.html');">찾아오시는 길</li>
+              </ul>
+            </li>
+            <li class=footerSitemapList>
+              <h2 class=footerMenu>제품소개</h2>
+              <ul>
+                <li onclick="moveToUrl('productInfo.html');">제품소개</li>
+              </ul>
+            </li>
+            <li class=footerSitemapList>
+              <h2 class=footerMenu>인증서</h2>
+              <ul>
+                <li onclick="moveToUrl('certificate.html');">인증서</li>
+              </ul>
+            </li>
+            <li class=footerSitemapList>
+              <h2 class=footerMenu>고객센터</h2>
+              <ul>
+                <li onclick="moveToUrl('serviceCenter.html');">고객문의</li>
+                <li onclick="moveToUrl('notice.html');">공지사항</li>
+                <li onclick="moveToUrl('faq.html');">자주묻는질문</li>
+                <li onclick="moveToUrl('question.html');">1:1 문의하기</li>
+                <li onclick="moveToUrl('employment.html');">인재채용</li>
+              </ul>
+            </li>
+            <div class=footerExtraArea>
+              <div class=footerServiceCenter>
+                <div>
+                  <span class="serviceCenterText">
+                    고객센터 운영시간
+                  </span>
+                </div>
+                <div>
+                  <span class="serviceCenterTime">
+                    <span class="textStyle">AM</span>
+                    07:50 ~
+                    <span class="textStyle">PM</span>
+                    18:10
+                  </span>
+                </div>
+                <div>
+                  <span class="tel">
+                    Tel 82+ 053-581-2277~9
+                  </span>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+      <div class=footerContainer2>
+        <div class=footerCopyright>
+          <div>대구광역시 달서구 성서동로 158(월암동) 우편번호 : 42721 #158, SEONGSEODONG-RO,DALSEO-GU,DAEGU,KOREA</div>
+          <div>TEL : 82-581-2277~9 FAX : 82-53-582-2252 E-mail : webmaster@daehwaind.com</div>
+          <div class=footerReserved>ⓒ 2023. DAEHWA All Rights Reserved.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <footer class="footer_m">
+    <div class="footer_m_info">
+      <div class="footer_m_logo">
+        <img src="../img/footer_m_logo.png" alt="">
+      </div>
+      <div class="footer_m_context">
+        <p>
+          대구광역시 달서구 성서동로 158 (우 : 42721)<br>
+          #158, SEONGSEODONG-RO,DALSEO-GU,DAEGU,KOREA.
+        </p>
+        <br>
+        <p>
+          TEL : 82-581-2277~9 FAX : 82-53-582-2252<br>
+          E-mail : webmaster@daehwaind.com
+        </p>
+      </div>
+    </div>
+    <div class="footer_m_copyright">
+      <p>
+        ⓒ 2023. DAEHWA All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

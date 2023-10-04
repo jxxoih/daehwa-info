@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>대화공업</title>
+
+  <script src="../js/common.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../css/common.css">
+  <link rel="stylesheet" type="text/css" href="../css/header.css">
+  <link rel="stylesheet" type="text/css" href="../css/footer.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/company.css">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="headerContainer1">
+      <div class="headerLogo">
+        <img class="headerLogoImg" src="../img/logo.png" onclick="moveToUrl('index.html')">
+      </div>
+      <div class="headerMenu">
+        <ul>
+          <li class="subMenuToggle">회사소개</li>
+          <li class="subMenuToggle">제품소개</li>
+          <li class="subMenuToggle">인증서</li>
+          <li class="subMenuToggle">고객센터</li>
+          <li>
+            <select class="headerLangSelector" onchange="shopLocation(this);">
+              <option selected disabled hidden>쇼핑몰</option>
+              <option value="1">기업몰</option>
+              <!-- <option value="2">개인몰</option> -->
+            </select>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="headerContainer2 disnone">
+      <div class="headerLogo">
+        &nbsp;
+      </div>
+      <div class="headerSubMenu">
+        <ul>
+          <li>
+            <ul>
+              <li onclick="moveToUrl('greetings.html')">인사말</li>
+              <li onclick="moveToUrl('history.html')">연혁</li>
+              <li onclick="moveToUrl('locationMap.html')">찾아오시는 길</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li onclick="moveToUrl('productInfo.html')">제품소개</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li onclick="moveToUrl('certificate.html')">인증서</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li onclick="moveToUrl('serviceCenter.html')">고객문의</li>
+              <li onclick="moveToUrl('notice.html')">공지사항</li>
+              <li onclick="moveToUrl('faq.html')">자주묻는질문</li>
+              <li onclick="moveToUrl('question.html')">1:1 문의하기</li>
+              <li onclick="moveToUrl('employment.html')">인재채용</li>
+            </ul>
+          </li>
+          <li class="emptyLi"></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <header class="header_m">
+    <div class="headerContainer2_m vMOff">
+      <div class="hambutton_x_m">
+        <img src="../img/hambutton_x_m.png" alt="닫기" onclick="closeMenu();">
+      </div>
+      <div class="hamMenuBar_m">
+        <ul>
+          <li onclick="moveToUrl('greetings.html')">
+            <h2>회사소개</h2>
+          </li>
+          <li onclick="moveToUrl('greetings.html')">
+            <span>인사말</span>
+          </li>
+          <li onclick="moveToUrl('history.html')">
+            <span>연혁</span>
+          </li>
+          <li onclick="moveToUrl('locationMap.html')">
+            <span>찾아오시는 길</span>
+          </li>
+        </ul>
+
+        <ul>
+          <li onclick="moveToUrl('productInfo.html')">
+            <h2>제품소개</h2>
+          </li>
+        </ul>
+
+        <ul>
+          <li onclick="moveToUrl('certificate.html')">
+            <h2>인증서</h2>
+          </li>
+        </ul>
+
+        <ul>
+          <li onclick="moveToUrl('serviceCenter.html')">
+            <h2>고객센터</h2>
+          </li>
+          <li onclick="moveToUrl('serviceCenter.html')">
+            <span>고객문의</span>
+          </li>
+          <li onclick="moveToUrl('notice.html')">
+            <span>공지사항</span>
+          </li>
+          <li onclick="moveToUrl('faq.html')">
+            <span>자주묻는질문</span>
+          </li>
+          <li onclick="moveToUrl('question.html')">
+            <span>1:1 문의하기</span>
+          </li>
+          <li onclick="moveToUrl('employment.html')">
+            <span>인재채용</span>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <h2>쇼핑몰</h2>
+          </li>
+          <li onclick="shopLocation_m(1)">
+            <span>기업몰</span>
+          </li>
+          <!-- <li onclick="shopLocation_m(2)">
+            <span>개인몰</span>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+    <div class="headerContainer1_m">
+      <div class="headerLogo_m">
+        <img class="headerLogoImg_m" src="../img/logo_m.png" onclick="moveToUrl('index.html')">
+      </div>
+      <div class="headerMenuBar_m" onclick="openMenu();">
+        <img src="../img/hambutton.png">
+      </div>
+    </div>
+
+  </header>
+
+
+
+
+
+
+
+
+
+  <main>
+    <div class="topBtn disnone" onclick="topScroll();">
+      <img src="../img/top.png" alt="">
+    </div>
+
+    <div class="mainHeaderTitleContainer">
+      <div class="mainHeaderTitleContainerImg">
+        &nbsp;
+      </div>
+      <div class="mainHeaderTitle">
+        <p class="titleText1">회사소개</p>
+        <p class="titleText2">Company</p>
+      </div>
+    </div>
+    <div class="mainContentContainer">
+      <div class="content1" style="display: none;">
+        <div class="mainContentTitle">
+          <p class="contentTitle1">인사말</p>
+          <p class="contentTitle2">"(주)대화공업의 제품은 조그마한 부품 하나에도 기술 집약적인 기업 철학이 담겨 있습니다."</p>
+        </div>
+        <div class="mainContent">
+          <div>
+            <img class="contentImg" src="../img/img1.png">
+          </div>
+          <div class="contentText">
+            <p class="contentText1">
+              당사는 1978년 창업이래<br>
+              리벳트 및 스크류 부품 생산에<br>
+              최선의 노력을 다하고 있습니다.
+            </p>
+            <p class="contentText2">
+              그동안 제품 개발에 끊임없는 연구를 계속함으로써 외국에 의존하던 부품을 국산화로 대체하는 효과도 달성하였습니다.<br><br>
+              언제나 소비자를 먼저 생각함으로써 최고의 품질, 저렴한 가격, 적기 공급을 기업이념으로 삼고 꾸준한 연구와 품질관리를 계속함으로써
+              고객들로부터 사랑과 신뢰를 받을 수 있는 기업으로 성장하고자 노사합심, 부단한 노력을 다할 것입니다.<br><br>
+              앞으로도 더 많은 지도편달과 성원을 부탁드립니다.<br><br>
+              감사합니다.<br><br>
+              <span class="rank">주식회사 대화공업 대표이사</span>&nbsp;<span class="ceoNm">송일강</span>
+            </p>
+          </div>
+        </div>
+        <div class="mainContentImg">
+          <ul class="mainContentImgUl">
+            <li><img class="contentImgList" src="../img/img2.png">
+              <p>한국공장</p>
+            </li>
+            <li><img class="contentImgList" src="../img/img2.png">
+              <p>중국공장</p>
+            </li>
+            <li><img class="contentImgList" src="../img/img2.png">
+              <p>none</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content2" style="display: none;">
+        <div class="mainContentTitle">
+          <p class="contentTitle1">연혁</p>
+          <p class="contentTitle2">리벳트 및 스크류 부품 생산에 최선의 노력을 다하고 있는 대화공업입니다.</p>
+        </div>
+
+
+        <div class="history">
+          <div class="listRight">
+            <span></span>
+            <div>
+              <ul>
+                <li>
+                  <dl>
+                    <dt>2000</dt>
+                    <dt>01월 01일</dt>
+                    <dd>대구시 달서구 월암동 1080-1 법인 설립.</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>1997</dt>
+                    <dt>01월 24일</dt>
+                    <dd>대구시 달서구 월암동 1080-1 확장 이전.</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>1994</dt>
+                    <dt>03월 06일</dt>
+                    <dd>대구시 달서구 갈산동 26-1 확장 이전.</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>1986</dt>
+                    <dt>02월 01일</dt>
+                    <dd>대구시 북구 노원3가 256-1번지 확장 이전.</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>1978</dt>
+                    <dt>12월 06일</dt>
+                    <dd>대구시 북구 노원동 507번지 설립.</dd>
+                  </dl>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="content3">
+        <div class="mainContentTitle">
+          <p class="contentTitle1">찾아오시는 길</p>
+          <p class="contentTitle2">리벳트 및 스크류 부품 생산에 최선의 노력을 다하고 있는 대화공업입니다.</p>
+        </div>
+
+        <div class="mapContainer">
+          <div class="map">
+            map
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+
+
+
+
+
+  <footer class=footer>
+    <div class="footer-frame">
+      <div class="footerText">
+        리벳트 및 스크류 부품 생산에 최선의 노력을 다하고 있는 대화공업입니다.
+      </div>
+
+      <div class=footerContainer1>
+        <div class=footerSitemapArea>
+          <ul>
+            <li class=footerSitemapList>
+              <h2 class=footerMenu>회사소개</h2>
+              <ul>
+                <li onclick="moveToUrl('greetings.html')">인사말</li>
+                <li onclick="moveToUrl('history.html')">연혁</li>
+                <li onclick="moveToUrl('locationMap.html')">찾아오시는 길</li>
+              </ul>
+            </li>
+            <li class=footerSitemapList>
+              <h2 class=footerMenu>제품소개</h2>
+              <ul>
+                <li onclick="moveToUrl('productInfo.html')">제품소개</li>
+              </ul>
+            </li>
+            <li class=footerSitemapList>
+              <h2 class=footerMenu>인증서</h2>
+              <ul>
+                <li onclick="moveToUrl('certificate.html')">인증서</li>
+              </ul>
+            </li>
+            <li class=footerSitemapList>
+              <h2 class=footerMenu>고객센터</h2>
+              <ul>
+                <li onclick="moveToUrl('serviceCenter.html')">고객문의</li>
+                <li onclick="moveToUrl('notice.html')">공지사항</li>
+                <li onclick="moveToUrl('faq.html')">자주묻는질문</li>
+                <li onclick="moveToUrl('question.html')">1:1 문의하기</li>
+                <li onclick="moveToUrl('employment.html')">인재채용</li>
+              </ul>
+            </li>
+            <div class=footerExtraArea>
+              <div class=footerServiceCenter>
+                <div>
+                  <span class="serviceCenterText">
+                    고객센터 운영시간
+                  </span>
+                </div>
+                <div>
+                  <span class="serviceCenterTime">
+                    <span class="textStyle">AM</span>
+                    07:50 ~
+                    <span class="textStyle">PM</span>
+                    18:10
+                  </span>
+                </div>
+                <div>
+                  <span class="tel">
+                    Tel 82+ 053-581-2277~9
+                  </span>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+      <div class=footerContainer2>
+        <div class=footerCopyright>
+          <div>대구광역시 달서구 성서동로 158(월암동) 우편번호 : 42721 #158, SEONGSEODONG-RO,DALSEO-GU,DAEGU,KOREA</div>
+          <div>TEL : 82-581-2277~9 FAX : 82-53-582-2252 E-mail : webmaster@daehwaind.com</div>
+          <div class=footerReserved>ⓒ 2023. DAEHWA All Rights Reserved.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <footer class="footer_m">
+    <div class="footer_m_info">
+      <div class="footer_m_logo">
+        <img src="../img/footer_m_logo.png" alt="">
+      </div>
+      <div class="footer_m_context">
+        <p>
+          대구광역시 달서구 성서동로 158 (우 : 42721)<br>
+          #158, SEONGSEODONG-RO,DALSEO-GU,DAEGU,KOREA.
+        </p>
+        <br>
+        <p>
+          TEL : 82-581-2277~9 FAX : 82-53-582-2252<br>
+          E-mail : webmaster@daehwaind.com
+        </p>
+      </div>
+    </div>
+    <div class="footer_m_copyright">
+      <p>
+        ⓒ 2023. DAEHWA All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
